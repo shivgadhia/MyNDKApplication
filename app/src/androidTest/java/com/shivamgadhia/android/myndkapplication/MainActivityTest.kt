@@ -19,7 +19,7 @@ class MainActivityTest {
 
     @Test
     fun displayedText() {
-        onView(withId(R.id.sample_text))
+        onView(withId(R.id.sampleTextView))
                 .check(matches(withText("Hello from JNI!")))
     }
 }

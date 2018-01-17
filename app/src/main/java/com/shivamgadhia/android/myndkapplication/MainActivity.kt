@@ -1,9 +1,8 @@
 package com.shivamgadhia.android.myndkapplication
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.shivamgadhia.android.myndkapplication.messagebuilder.MessageBuilder
-import com.shivamgadhia.android.myndkapplication.messagebuilder.NativeStringFactory
+import android.support.v7.app.AppCompatActivity
+import com.shivamgadhia.android.nativelibrary.NativeStringLoader
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,8 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val messageBuilder = MessageBuilder()
-
-        sample_text.text = messageBuilder.buildMessage(NativeStringFactory())
+        sampleTextView.text = NativeStringLoader().nativeString
     }
 }
